@@ -1,31 +1,36 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel", "setuptools_scm"]
+requires = ["setuptools>=61.0", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "mixers"
-version = "0.0.13"
-authors = [
-  { name="Taha Shieenavaz", email="tahashieenavaz@gmail.com" },
-]
+dynamic = ["version"]
 description = "The unofficial implementation of MLP Mixer by Tolstikhin, Houlsby, Kolesnikov, Beyer et all based on the official JAX implementation."
 readme = "README.md"
 requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Taha Shieenavaz", email = "tahashieenavaz@gmail.com" }
+]
+dependencies = ["torch", "einops"]
+keywords = ["mlp", "mixer", "image classification"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-dependencies = ["torch", "einops"]
-keywords = ["mlp", "mixer", "image classification"]
-license = { file = "LICENSE" }
-urls = { Homepage="https://github.com/tahashieenavaz/mixers", Repository="https://github.com/tahashieenavaz/mixers", Documentation="https://github.com/tahashieenavaz/mixers#readme" }
+
+[project.urls]
+Homepage = "https://github.com/tahashieenavaz/mixers"
+Repository = "https://github.com/tahashieenavaz/mixers"
+Documentation = "https://github.com/tahashieenavaz/mixers#readme"
+"Bug Tracker" = "https://github.com/tahashieenavaz/mixers/issues"
+Changelog = "https://github.com/tahashieenavaz/mixers/releases"
+
+[tool.setuptools_scm]
 
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["src"]
 exclude = ["tests*", "docs*", "figures*", "mermaid*", "scripts*"]
 
 [tool.setuptools.package-data]
