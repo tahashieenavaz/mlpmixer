@@ -1,5 +1,5 @@
 import torch
-from .modules import MLPMixer
+from mixers.modules import MLPMixer
 
 
 class LargeMixer16(MLPMixer):

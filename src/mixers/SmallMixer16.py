@@ -1,6 +1,6 @@
 import torch
 from typing import Union, Tuple
-from .modules import MLPMixer
+from mixers.modules import MLPMixer
 
 
 class SmallMixer16(MLPMixer):

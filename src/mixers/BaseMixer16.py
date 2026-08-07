@@ -1,6 +1,6 @@
 import torch
 from typing import Type
-from .modules import MLPMixer
+from mixers.modules import MLPMixer
 
 
 class BaseMixer16(MLPMixer):
